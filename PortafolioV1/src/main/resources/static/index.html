@@ -14,27 +14,31 @@
         content="portafolio, ingeniería en software, desarrollador, Java, MySQL, MongoDB">
 
   <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<header>
+<header class="encabezado">
   <h1>Oribiel Beltran</h1>
   <p>Estudiante de Ingeniería en Software</p>
 
+  <section id="secciones">
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="hobbies.html">Mis hobbies</a>
+    <a class="btn"  href="index.html">Inicio</a>
+    <a class="btn"  href="hobbies.html">Mis hobbies</a>
   </nav>
 
   <nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#habilidades">Habilidades</a>
-    <a href="#formacion">Formación</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#contacto">Contacto</a>
+    <a class="btn"  href="#sobre-mi">Sobre mí</a>
+    <a class="btn"  href="#habilidades">Habilidades</a>
+    <a class="btn"  href="#formacion">Formación</a>
+    <a class="btn"  href="#proyectos">Proyectos</a>
+    <a class="btn"  href="#experiencia">Experiencia</a>
+    <a class="btn"  href="#contacto">Contacto</a>
   </nav>
+  </section>
 </header>
 
 
@@ -50,12 +54,19 @@
       Me interesa el desarrollo de software y la tecnología.
       También me gusta practicar basquetbol.
     </p>
-
-    <img
+    <div class="fila-imagenes">
+    <img    class="foto"
             src="imagenes/profile.jpg"
             alt="Foto de perfil de Oribiel Beltran"
             width="203">
 
+    <span class="signo">=</span>
+
+    <img class="foto"
+         src="imagenes/miniom.png"
+         width="203"
+         alt="Miniom">
+    </div>
   </section>
 
 
@@ -89,7 +100,7 @@
 
     <h2>Formación académica</h2>
 
-    <table>
+    <table class="tabla-bonita">
 
       <thead>
       <tr>
@@ -156,7 +167,7 @@
 
     <h2>Experiencia laboral</h2>
 
-    <table>
+    <table class="tabla-experiencia">
 
       <thead>
       <tr>
@@ -218,10 +229,12 @@
 
 
 <footer>
+ <section id="footer">
+   <p>Portafolio personal de Oribiel Beltran</p>
 
-  <p>Portafolio personal de Oribiel Beltran</p>
+   <p>&copy; 2026 Oribiel Beltran</p>
+ </section>
 
-  <p>&copy; 2026 Oribiel Beltran</p>
 
 </footer>
 

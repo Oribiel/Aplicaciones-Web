@@ -1,0 +1,111 @@
+*{
+ font-family: Arial, "Arial BLack";
+}
+ body{
+ background-color: lightblue;
+
+ color: black;
+
+ line-height: 1.6;
+
+ margin: 0;
+ padding: 0;
+ }
+
+  h1, h2, h3{
+  color: #0056b3;
+  }
+
+
+
+   #sobre-mi, #habilidades, #proyectos, #contactos, #formacion, #experiencia, #contacto, #footer {
+     background-color: #fff;
+     padding: 20px;
+     margin: 20px;
+     border-radius: 8px;
+
+     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+   }
+
+   #secciones{
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   }
+
+
+
+    .tabla-bonita th, .tabla-bonita td{
+     border: 1px solid lightblue;
+     padding: 10px;
+     text-align: left;
+    }
+    .tabla-experiencia th, .tabla-experiencia td{
+       border: 1px solid lightblue;
+       padding: 10px;
+       text-align: left;
+    }
+
+   .encabezado {
+       padding: 0;
+   }
+
+   .encabezado > h1,
+   .encabezado > p {
+       margin-left: 40px;
+       margin-right: 40px;
+   }
+
+   .fila-imagenes {
+       display: flex;
+       align-items: center;
+       gap: 20px;
+       flex-wrap: wrap;
+   }
+
+   .foto {
+       width: 203px;
+       height: auto;
+   }
+
+   .signo {
+       font-size: 40px;
+       font-weight: bold;
+   }
+
+   body.pagina-hobbies {
+     background-color: orange;
+
+   }
+   #header-hobbies, #cuerpo-hobbies, #footer-hobbies {
+       background-color: #fff;
+       padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+   }
+  .btn{
+  /* Se se acomoda en linea, pero permite hacer la forma del bloque   */
+   display: inline-block;
+   background-color: lightblue;
+   color: black;
+
+   padding: 8px 15px;
+   margin: 5px;
+
+     border-radius: 4px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+     text-decoration: none;
+   }
+
+
+
+
+
+
