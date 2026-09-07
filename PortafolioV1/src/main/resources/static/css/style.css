@@ -1,109 +1,154 @@
-*{
- font-family: Arial, "Arial BLack";
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
- body{
- background-color: lightblue;
 
- color: black;
+body {
+    background-color: #F3E6D0;
+    color: #2D2A26;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
- line-height: 1.6;
-
- margin: 0;
- padding: 0;
- }
-
-  h1, h2, h3{
-  color: #0056b3;
-  }
-
-
-
-   #sobre-mi, #habilidades, #proyectos, #contactos, #formacion, #experiencia, #contacto, #footer {
-     background-color: #fff;
-     padding: 20px;
-     margin: 20px;
-     border-radius: 8px;
-
-     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-   }
-
-   #secciones{
-      background-color: #fff;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 8px;
-
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-   }
+h1,
+h2,
+h3 {
+    color: #8F2D32;
+}
 
 
+.encabezado {
+    padding-top: 20px;
+    text-align: center;
+}
 
-    .tabla-bonita th, .tabla-bonita td{
-     border: 1px solid lightblue;
-     padding: 10px;
-     text-align: left;
-    }
-    .tabla-experiencia th, .tabla-experiencia td{
-       border: 1px solid lightblue;
-       padding: 10px;
-       text-align: left;
-    }
+#menu {
+    width: 90%;
+    max-width: 1100px;
 
-   .encabezado {
-       padding: 0;
-   }
+    background-color: #FFFDF8;
 
-   .encabezado > h1,
-   .encabezado > p {
-       margin-left: 40px;
-       margin-right: 40px;
-   }
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
 
-   .fila-imagenes {
-       display: flex;
-       align-items: center;
-       gap: 20px;
-       flex-wrap: wrap;
-   }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 
-   .foto {
-       width: 203px;
-       height: auto;
-   }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
 
-   .signo {
-       font-size: 40px;
-       font-weight: bold;
-   }
 
-   body.pagina-hobbies {
-     background-color: orange;
+#sobre-mi, #habilidades, #proyectos, #contactos, #formacion, #experiencia, #contacto, #footer, .cabecini {
+    width: 90%;
+    max-width: 1100px;
 
-   }
-   #header-hobbies, #cuerpo-hobbies, #footer-hobbies {
-       background-color: #fff;
-       padding: 20px;
-        margin: 20px;
-        border-radius: 8px;
+    background-color: #FFFDF8;
 
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-   }
-  .btn{
-  /* Se se acomoda en linea, pero permite hacer la forma del bloque   */
-   display: inline-block;
-   background-color: lightblue;
-   color: black;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #DEC9A3;
+    border-radius: 8px;
 
-   padding: 8px 15px;
-   margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
 
-     border-radius: 4px;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-     text-decoration: none;
-   }
+.btn {
+    display: inline-block;
 
+    background-color: #8F2D32;
+    color: white;
+
+    padding: 8px 15px;
+    border-radius: 5px;
+
+    text-decoration: none;
+}
+
+/* hover es para que haga el efecto de seleccion del botn*/
+
+.btn:hover {
+    background-color: #651F23;
+    /* es para que aparezca el subrayadd*/
+    text-decoration: underline;
+}
+
+
+.fila-imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.foto {
+    width: 203px;
+    height: auto;
+}
+
+.foto1 {
+    width: 100px;
+    border: 3px solid #8F2D32;
+    border-radius: 6pxlkpx;
+    margin: 6px;
+}
+
+.foto2 {
+    width:: 200px;
+    border: 3px solid #8F2D32;
+    border-radius: 6px;
+    margin: 6px;
+}
+
+.signo {
+    color: #8F2D32;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.tabla-bonita, .tabla-experiencia {
+    width: 100%;
+    /* los borders que estan juntos se unen*/
+    border-collapse: collapse;
+}
+
+.tabla-bonita th, .tabla-bonita td, .tabla-experiencia th, .tabla-experiencia td {
+    border: 1px solid #DEC9A3;
+    padding: 10px;
+    text-align: left;
+}
+
+body.pagina-hobbies {
+    background-color: #F3E6D0;
+}
+
+
+body.pagina-hobbies header, body.pagina-hobbies main > section, body.pagina-hobbies footer {
+    width: 90%;
+    max-width: 1100px;
+
+    background-color: #FFFDF8;
+
+    padding: 20px;
+    margin: 20px auto;
+
+    border: 1px solid #DEC9A3;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+body.pagina-hobbies header {
+    text-align: center;
+}
 
 
 
