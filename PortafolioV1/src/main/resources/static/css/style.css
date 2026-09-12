@@ -1,0 +1,301 @@
+:root {
+    --color-principal: #4C1D95;
+    --color-principal-oscuro: #351366;
+    --color-fondo: #F3EEF9;
+    --color-superficie: #FFFCFF;
+    --color-acento-suave: #E9DDF8;
+    --color-texto: #2B203A;
+    --color-borde: #D8C6ED;
+
+    --sombra-normal: 0 2px 4px rgba(46, 16, 75, 0.12);
+    --sombra-elevada: 0 10px 20px rgba(46, 16, 75, 0.22);
+}
+
+* {
+    /*con esto ya no importa si se modifica el ancho y alto*/
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
+    /* Grid principal: header, main y footer */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*
+ px: unidad de medida absoluta
+ %: relativo al contenedor padre
+ vw: relativo al ancho total de la pantalla del navegador
+ vh: es relativo al ancho total de la pantalla del navegador
+ dvh: es relativo del size de la fuente raiz, respeta el lato que tiene el dispositivo
+ em: relativo a la fuente del dispositivo
+ fr: una fraccion pero de un grid
+ rem: relativo a la fuente del dispositivo y el tamanio del contenedor
+ ---pseudo clases
+ :hover =mouse encima
+ :active =cuando esta presionado un click
+ :focus = mientras el elemento tiene el foco
+ :visited = enlace ya visitado
+ :checked= cuando esta marcado
+ :disable = para cuando el elemento esta desabilitado
+ :first-child= primer hijo del elemento
+ :last-child: ultimo elemento
+ : nth-child(n) por patron numerico
+ --pseudo elementos
+  ::before = injecta contenido antes
+  ::after = inhecta conectenido despues
+  ::first-letter para primera letra
+
+*/
+
+
+h1,
+h2,
+h3 {
+    color: var(--color-principal);
+}
+
+main {
+    min-width: 0;
+}
+
+ /* clase
+ nav a{
+  color: blue;
+  text-decoration: none;
+  padding: 5px 10px;
+  borde-radius: 4px;
+  transition: background-color 0.3s ease;
+ }
+
+ nav a:hover{
+  background-color: rgba(255,255,255,0.2);
+ }
+ main{
+ display: grid;
+ grid-template-rows: 1fr;
+ gap: var(--spacing);
+ padding: var(--spacing);
+ max-width: 1200px;
+ margin: 0 auto;
+
+
+ }
+  section{
+    background-color: orange;
+    padding: var(--spacing);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,.05;
+  }
+*/
+
+
+
+
+/* grid viene a reemplazar las tablas */
+
+
+.encabezado {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.cabecini,
+#menu,
+#sobre-mi,
+#habilidades,
+#proyectos,
+#contactos,
+#formacion,
+#experiencia,
+#contacto,
+#footer {
+    width: 90%;
+    max-width: 1100px;
+    background-color: var(--color-superficie);
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: var(--sombra-normal);
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+#sobre-mi, #habilidades, #proyectos, #contactos, #formacion, #experiencia,   #contacto, #footer, .cabecini {
+    width: 90%;
+    max-width: 1100px;
+
+    background-color: #FFFDF8;
+
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #DEC9A3;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* hover es para que haga el efecto de seleccion del botn*/
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-principal-oscuro);
+    text-decoration: underline;
+}
+.btn:active {
+    transform: scale(0.97);
+}
+
+
+
+.foto-perfil {
+    float: left;
+    width: 200px;
+    max-width: 45%;
+    height: auto;
+    margin: 0 20px 10px 0;
+    border: 3px solid var(--color-principal);
+    border-radius: 50%;
+}
+
+.limpiar-float {
+    clear: both;
+}
+main > section {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main > section:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-elevada);
+}
+
+
+
+    /*clase
+    float: right;
+    margin: 15px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color):
+     */
+
+
+
+.tabla-bonita,
+.tabla-experiencia {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-bonita th,
+.tabla-bonita td,
+.tabla-experiencia th,
+.tabla-experiencia td {
+    border: 1px solid var(--color-borde);
+    padding: 10px;
+    text-align: left;
+}
+
+.tabla-bonita th,
+.tabla-experiencia th {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.tabla-bonita tbody tr:hover,
+.tabla-experiencia tbody tr:hover {
+    background-color: var(--color-acento-suave);
+}
+
+body.pagina-hobbies {
+    background-color: var(--color-fondo);
+}
+
+#header-hobbies,
+#footer-hobbies {
+    width: 90%;
+    max-width: 1100px;
+    background-color: var(--color-superficie);
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: var(--sombra-normal);
+    text-align: center;
+}
+
+#header-hobbies nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Grid responsivo de tarjetas */
+
+#cuerpo-hobbies {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-content: start;
+    gap: 20px;
+}
+
+.tarjeta-hobby {
+    background-color: var(--color-superficie);
+    padding: 20px;
+    border: 3px solid var(--color-borde);
+    border-radius: 8px;
+    box-shadow: var(--sombra-normal);
+}
+
+/* Flexbox dentro de cada tarjeta para alinear icono y título */
+
+.encabezado-hobby {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.encabezado-hobby h2 {
+    margin: 0;
+}
+
+.icono-hobby {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: var(--color-acento-suave);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
