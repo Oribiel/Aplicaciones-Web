@@ -1,6 +1,6 @@
 package com.example.GameVault.service;
 
-import com.example.GameVault.model.juego;
+import com.example.GameVault.model.Juego;
 import com.example.GameVault.repository.JuegoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,12 +24,12 @@ public class JuegoService {
     private static final String UPLOAD_DIR="src/main/resources/static/uploads/";
 
 
-    public List<juego> listarTodos(){
+    public List<Juego> listarTodos(){
         return juegoRepository.findAll();
     }
 
 
-    public void guardarJuego(juego juego, MultipartFile portada){
+    public void guardarJuego(Juego juego, MultipartFile portada){
         String nombreArchivo = "default.png"; // Imagen por defecto si no suben nada
 
 
@@ -75,4 +75,3 @@ public class JuegoService {
         }
     }
 }
-

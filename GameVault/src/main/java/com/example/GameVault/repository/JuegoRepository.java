@@ -1,7 +1,6 @@
 package com.example.GameVault.repository;
 
-import com.example.GameVault.model.juego;
-import jakarta.persistence.Id;
+import com.example.GameVault.model.Juego;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -10,9 +9,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface JuegoRepository extends JpaRepository<juego, Long> {
+public interface JuegoRepository extends JpaRepository<Juego, Long> {
     //SELECCT * FROM juegos WHERE titulo like '%titulo'
-    List<juego> findByTituloContainingIgnoreCase(String titulo);
+    List<Juego> findByTituloContainingIgnoreCase(String titulo);
     // Ejemplo 2: Si tuvieramos un campo 'genero', buscar todos los de un género específico.
     // List<Juego> findByGenero(String genero);
 
@@ -22,6 +21,6 @@ public interface JuegoRepository extends JpaRepository<juego, Long> {
     // Ejemplo 4: Si tuviéramos 'activo' (boolean).
     // List<Juego> findByActivoTrue();
 
-    @Query("SELECT j FROM juego WHERE LOWER(j.descripcion) LIKE LOWER(CONCAT('%', :palabra, '%'))")
-    List<juego> buscarJuegoPorid(@Param("palabra") String palabra);
+    @Query("SELECT j FROM Juego j WHERE LOWER(j.descripcion) LIKE LOWER(CONCAT('%', :palabra, '%'))")
+    List<Juego> buscarJuegoPorid(@Param("palabra") String palabra);
 }
