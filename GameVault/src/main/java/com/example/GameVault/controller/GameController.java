@@ -43,6 +43,7 @@ public class GameController {
         nuevoJuego.setDescripcion(descripcion);
         juegoService.guardarJuego(nuevoJuego, portada);
 
+
         // Redirigimos a la lista de juegos (Patrón PRG - Post/Redirect/Get)
         return "redirect:/juegos";
     }
