@@ -92,5 +92,13 @@ public class JuegoService {
             return "default.png";
         }
     }
+    //falta agg validaciones
+    public void eliminarJuego(Long id){
+        this.juegoRepository.deleteById(id);
+    }
+
+    public Juego buscarPorId(Long id){
+        return this.juegoRepository.findById(id).orElse(null);
+    }
 
 }

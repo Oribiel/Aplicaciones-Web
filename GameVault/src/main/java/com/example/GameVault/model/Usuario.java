@@ -22,7 +22,7 @@ public class Usuario {
     private String nombre;
 
     @Column(nullable = false, unique = true)
-    private String correo;
+    private String email;
 
     @Column(nullable = false)
     private String contrasenia;

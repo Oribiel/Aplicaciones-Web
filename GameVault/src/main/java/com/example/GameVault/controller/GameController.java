@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -29,24 +30,67 @@ public class GameController {
     }
 
     @GetMapping("/juegos/nuevo")
-    public String mostrarFormulario(){
+    public String mostrarFormulario(Model model)
+    {
+        model.addAttribute("juego", new Juego());
         return "formulario";
     }
 
     @PostMapping("/juegos")
     public String guardarJuego(@RequestParam("titulo") String titulo,
                                @RequestParam("descripcion") String descripcion,
+                               @RequestParam("precio")Double precio,
+                               @RequestParam("categoria") String categoria,
                                @RequestParam("portada") MultipartFile portada) {
 
         Juego nuevoJuego = new Juego();
         nuevoJuego.setTitulo(titulo);
         nuevoJuego.setDescripcion(descripcion);
+        nuevoJuego.setPrecio(precio);
+        nuevoJuego.setCategoria(categoria);
         juegoService.guardarJuego(nuevoJuego, portada);
 
 
         // Redirigimos a la lista de juegos (Patrón PRG - Post/Redirect/Get)
         return "redirect:/juegos";
     }
+
+    @PostMapping("/juegos/eliminar/{id}")
+    public String eliminarJuego(@PathVariable("id") Long id){
+        this.juegoService.eliminarJuego(id);
+
+        return "redirect:/juegos";
+    }
+
+    @GetMapping("/juegos/editar/{id}")
+    public String actualizarJuego(@PathVariable Long id, Model model){
+        Juego juego = this.juegoService.buscarPorId(id);
+        model.addAttribute("juego", juego);
+        return "formulario";
+
+    }
+
+    @PostMapping("/juegos/editar/{id}")
+    public String editarJuego(@PathVariable Long id,
+                               @RequestParam("titulo") String titulo,
+                               @RequestParam("descripcion") String descripcion,
+                               @RequestParam("precio")Double precio,
+                               @RequestParam("categoria") String categoria,
+                               @RequestParam(value="portada",required= false) MultipartFile portada) {
+        //validar que existe
+        Juego nuevoJuego = this.juegoService.buscarPorId(id);
+        nuevoJuego.setTitulo(titulo);
+        nuevoJuego.setDescripcion(descripcion);
+        nuevoJuego.setPrecio(precio);
+        nuevoJuego.setCategoria(categoria);
+        juegoService.guardarJuego(nuevoJuego, portada);
+
+
+        // Redirigimos a la lista de juegos (Patrón PRG - Post/Redirect/Get)
+        return "redirect:/juegos";
+    }
+
+
 
 
 
